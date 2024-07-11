@@ -1,0 +1,72 @@
+.temperature {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: wrap;
+    width: 20rem;
+    margin: 0 auto;
+
+    .temperature-monitor {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20rem;
+        height: 20rem;
+        border-radius: 20rem;
+        color: #fff;
+        font-size: 5rem;
+        overflow: hidden;
+
+        .temperature-color {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            &.light {
+                background-color: lightblue;
+                z-index: -4;
+            }
+
+            &.blue {
+                background-color: blue;
+                z-index: -3;
+                opacity: 0
+            }
+
+            &.orange {
+                background-color: orange;
+                z-index: -2;
+                opacity: 0
+            }
+
+            &.red {
+                background-color: red;
+                z-index: -1;
+                opacity: 0;
+            }
+        }
+
+        .celcius {
+        }
+    }
+
+    .temperature-button {
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        width: 100%;
+
+        button {
+            width: 5rem;
+            height: 5rem;
+            border-radius: 5rem;
+            background-color: #F0F0F0 ;
+            border: 0;
+            font-size: 3rem;
+            cursor: pointer;
+        }
+    }
+}

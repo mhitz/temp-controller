@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState, useEffect} from 'react';
+import TempMonitor from './components/TempMonitor';
+import './style/Style.reset.css';
+import './style/Style.common.scss';
+import './style/Style.monitor.scss';
 
 function App() {
+  const [celcius, setCelcius] = useState(0);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <TempMonitor 
+        celcius={celcius} 
+        setCelcius={setCelcius}
+      />
     </div>
   );
 }
